@@ -1,0 +1,11 @@
+/*
+Theme Name: blankslate-child
+Description: Thème enfant de blankslate
+Author: 
+Template: blankslate
+*/
+
+header{
+	color: blue;
+	background-color: yellow;
+}
