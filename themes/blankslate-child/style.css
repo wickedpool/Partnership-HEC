@@ -19,6 +19,12 @@ Template: blankslate
  	text-align: center;
  }
 
+/* Header style */
+
+.header {
+    top: 40%;
+}
+
 /* Toggle Styles */
 
 #wrapperr {
@@ -35,7 +41,7 @@ Template: blankslate
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 550px;
+    left: 450px;
     width: 0;
     height: 100%;
     margin-left: -550px;
@@ -69,6 +75,7 @@ Template: blankslate
     width: 450px;
     margin: 0;
     padding: 0;
+    left: 50px;
     list-style: none;
 }
 
@@ -86,7 +93,7 @@ Template: blankslate
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 153, 0, 0.45);
 }
 
 .sidebar-nav li a:active,
@@ -156,9 +163,9 @@ footer{
 	background:#ccc;
 position:absolute;
 bottom:0;
-width:100%;
+width:20%;
 padding-top:50px;
-height:50px;
+height:20px;
 }
 
 footer li{
@@ -175,6 +182,7 @@ footer li{
     color: white;
     text-align:center;
     border-radius: 5px;
+    background-color: #FE642E;
 }
 .bouton:hover{
     text-decoration:none;
@@ -183,11 +191,4 @@ footer li{
     background-color:#E05820;
     color: white;
     text-decoration:none;
-}
-/* Couleur bouton */
-.bouton.orange {
-    background-color:#E15821;
-}
-.bouton.bleu {
-    background-color:#174a5d;
 }
