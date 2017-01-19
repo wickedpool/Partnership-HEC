@@ -58,7 +58,7 @@ Template: blankslate
 }
 
 #wrapper.toggled #page-content-wrapper {
-    margin-right: -550px;
+    margin-right: -450px;
 }
 
 /* Sidebar Styles */
@@ -66,7 +66,7 @@ Template: blankslate
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 550px;
+    width: 450px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -163,4 +163,31 @@ height:50px;
 
 footer li{
 		display: inline;
+}
+
+/* Format bouton */
+
+.bouton{
+    display: inline-block;
+    width: auto;
+    margin: 0 .75em;
+    padding: .37em 1.5em;
+    color: white;
+    text-align:center;
+    border-radius: 5px;
+}
+.bouton:hover{
+    text-decoration:none;
+}
+.bouton:active{
+    background-color:#E05820;
+    color: white;
+    text-decoration:none;
+}
+/* Couleur bouton */
+.bouton.orange {
+    background-color:#E15821;
+}
+.bouton.bleu {
+    background-color:#174a5d;
 }
