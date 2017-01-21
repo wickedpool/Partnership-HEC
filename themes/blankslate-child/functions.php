@@ -25,4 +25,49 @@ function msk_add_love_product_tab_content() {
 	wc_get_template('single-product/tabs/love-product.php');
 }
 
+function msk_add_loves_hates_fields_to_product() {
+	woocommerce_wp_text_input(
+		array(
+			'id' => 'loves', 
+			'data_type' => 'decimal', 
+			'label' => __('Loves', 'msk'),
+			'placeholder' => __('Amount of love', 'msk'),
+			'description' => __('Love this product has received.', 'msk'),
+			'desc_tip' => true
+		)
+	);
+
+	woocommerce_wp_text_input(
+		array(
+			'id' => 'hates', 
+			'data_type' => 'decimal', 
+			'label' => __('Hates', 'msk'),
+			'placeholder' => __('Amount of hate', 'msk'),
+			'description' => __('Hatred this product has received.', 'msk'),
+			'desc_tip' => true
+		)
+	);
+}
+add_action('woocommerce_product_options_advanced', 'msk_add_loves_hates_fields_to_product');
+
+/*************************************************************************************************
+* On enregistre les valeurs de LOVES & HATES lorsqu'on enregistre un post
+*************************************************************************************************/
+function msk_save_loves_hates_product_fields($product_id, $post, $update) {
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+
+	if ($post->post_type == 'product') {
+		if (isset($_POST['loves'])) {
+			$loves = (int)$_POST['loves'];
+			update_post_meta($product_id, 'loves', $loves);
+		}
+
+		if (isset($_POST['hates'])) {
+			$hates = (int)$_POST['hates'];
+			update_post_meta($product_id, 'hates', $hates);
+		}
+	}
+}
+add_action('save_post', 'msk_save_loves_hates_product_fields', 10, 3);
+
 ?>
