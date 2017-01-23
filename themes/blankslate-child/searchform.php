@@ -43,7 +43,7 @@ $equips = array(
 
                 echo '<div class="col-xs-2"> <input type="checkbox" name="equipements[]" class="checkbox-equip" '
                 . 'id="equipment[' . $key . ']" value="' . $key . '"'
-                . checked( in_array( $key, get_query_var( 'equipements' ) ), true, false ) . '> <label for="equipment[' . $key . ']"><p class = "search-font">' . $equip . '</p><img src="'echo THEME_IMG_PATH; . $key .'.png"/></label> </div>';
+                . checked( in_array( $key, get_query_var( 'equipements' ) ), true, false ) . '> <label for="equipment[' . $key . ']"><p class = "search-font">' . $equip . '</p><img src="'echo THEME_IMG_PATH . $key .'.png"/></label> </div>';
             $num++;
             if ($num > $breaker) { echo '</div>'; $num = 1; } // The num arrived at the break-point. Close the row!
         }
