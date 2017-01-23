@@ -102,22 +102,6 @@ function msk_add_test_field_data() {
 			'value' => 'value2', // La valeur enregistrée, choisie, de la select
 		)
 	);
-
-	// Champ de type radio
-	woocommerce_wp_radio(
-		array(
-			'id' => 'input_radio', 
-			'label' => __(' ', 'msk'),
-			'options' => array( // Un tableau avec les options (value et nom) du radio
-				'value4' => 'Pif',
-				'value5' => 'Paf',
-				'value6' => 'Pouf',
-			),
-			'value' => 'value5', // La valeur enregistrée, choisie, de la radio
-		)
-	);
-
-	echo '</div>';
 }
 add_action('woocommerce_product_options_general_product_data', 'msk_add_test_field_data'); 
 
@@ -225,6 +209,29 @@ woocommerce_wp_text_input(
 	)
 );
 
+woocommerce_wp_text_input(
+      array(
+        'id' => 'prix',
+        'data_type' => 'decimal',
+        'label' => __('prix', 'msk'),
+        'placeholder' => __('Entrez le prix indicatif de la salle', 'msk'),
+        'description' => __('Hatred this product has received.', 'msk'),
+		'desc_tip' => true
+	)
+);
+
+	woocommerce_wp_radio(
+		array(
+			'id' => 'reponse', 
+			'label' => __('reponse de lhote avant', 'msk'),
+			'options' => array( // Un tableau avec les options (value et nom) du radio
+				'value4' => '24h',
+				'value5' => '48h',
+				'value6' => '72h',
+			),
+			'value' => 'value4', // La valeur enregistrée, choisie, de la radio
+		)
+	);
  echo '</div>';
 }
 
@@ -233,24 +240,35 @@ add_action('woocommerce_product_options_general_product_data', 'msk_add_test_fie
 function msk_save_hotel_fields($product_id, $post, $update) {
  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
 
- if ($post->post_type == 'product') {
+  if ($post->post_type == 'product') {
    if (isset($_POST['presentation'])) {
      $loves = $_POST['presentation'];
      update_post_meta($product_id, 'presentation', $loves);
    }
 
-   if (isset($_POST['situation'])) {
+  if (isset($_POST['situation'])) {
      $hates = $_POST['situation'];
      update_post_meta($product_id, 'situation', $hates);
    }
 
-    if (isset($_POST['telephone'])) {
+  if (isset($_POST['telephone'])) {
       $hates = $_POST['telephone'];
       update_post_meta($product_id, 'telephone', $hates);
     }
-    if (isset($_POST['capacite'])) {
+
+  if (isset($_POST['capacite'])) {
       $hates = $_POST['capacite'];
       update_post_meta($product_id, 'capacite', $hates);
+    }
+
+  if (isset($_POST['prix'])) {
+      $hates = $_POST['prix'];
+      update_post_meta($product_id, 'prix', $hates);
+    }
+
+  if (isset($_POST['reponse'])) {
+      $hates = $_POST['reponse'];
+      update_post_meta($product_id, 'reponse', $hates);
     }
  }
 }
