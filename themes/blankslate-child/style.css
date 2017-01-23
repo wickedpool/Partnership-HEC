@@ -202,7 +202,8 @@ overflow: hidden;
 footer li{
 		display: inline;
     font-style: normal;
-      margin-right: 140px;
+      margin-right: 60px;
+      margin-left: 60px;
       position: relative;
       bottom: -20px;
 }
@@ -214,4 +215,14 @@ footer li a{
 
 footer li a:hover {
   color: black;
+}
+
+.search-font{
+  font-size: 10px;
+  text-align: left;
+  float: left;
+}
+
+input + [name]{
+  display: none;
 }
