@@ -1,7 +1,4 @@
 <form action="<?php echo home_url( '/' ); ?>">
-	<!-- Ici on affiche le champ « s »
-	mais nous aurions pu également en faire
-	un champ de type hidden avec une valeur vide-->
   <p>
   	<input type="text" name="s" placeholder="Ville / Nom du lieu" value="<?php the_search_query(); ?>" id="s">
   </p>
@@ -38,25 +35,17 @@ $equips = array(
   'cafe' => __( 'Café' ),
     );
     ?>
-
-
     <?php
-
         $num = 1;
         $breaker = 5; //How many cols inside a row?
-
         foreach ( $equips as $key => $equip ) {
-
             if ($num == 1) echo '<div class="row">'; //First col, so open the row.
 
                 echo '<div class="col-xs-2"> <input type="checkbox" name="equipements[]" class="checkbox-equip" '
                 . 'id="equipment[' . $key . ']" value="' . $key . '"'
                 . checked( in_array( $key, get_query_var( 'equipements' ) ), true, false ) . '> <label for="equipment[' . $key . ']"><p class = "search-font">' . $equip . '</p><img src="/wordpress/wp-content/themes/blankslate-child/images/equipements/'. $key .'.png"/></label> </div>';
-
             $num++;
-
             if ($num > $breaker) { echo '</div>'; $num = 1; } // The num arrived at the break-point. Close the row!
-
         }
     ?>
   </div>
