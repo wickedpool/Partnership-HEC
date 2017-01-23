@@ -8,7 +8,6 @@ wp_enqueue_script('perso-js', get_stylesheet_directory_uri(). '/scripts/scripts.
 }
 add_action( 'wp_enqueue_scripts', 'wpm_enqueue_styles');
 ?>
-
 <?php
 add_filter( 'query_vars', 'willy_add_query_vars' );
 function willy_add_query_vars( $vars ){
