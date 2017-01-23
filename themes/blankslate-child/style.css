@@ -15,6 +15,41 @@ Template: blankslate
     overflow-x: hidden;
  }
 
+ header{
+   background-color: #FFF;
+   height: 100px;
+   position: absolute;
+   width: 100%;
+   top: 0;
+ }
+
+
+#site-title a{
+  color: #F35919;
+}
+
+.btn-warning{
+position: absolute;
+top: 20%;
+  right: 10px;
+}
+
+ body.home{
+       background:url(images/meeting_room.jpg) no-repeat;
+       height: 100%;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+ }
+
+ .home .entry-content {
+   font-size: 40px;
+   text-align: center;
+   margin-top: 450px;
+   color: white;
+ }
+
  #site-title{
  	text-align: center;
  }
@@ -28,8 +63,14 @@ Template: blankslate
     transition: all 0.5s ease;
 }
 
-#wrapperr.toggled {
-    padding-left: 550px;
+
+#wrapperr.toggled >   #menu-toggle img{
+    position: absolute; top: 50%; left: 500px; width: 60px; z-index: 9999;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
 }
 
 #sidebar-wrapper {
@@ -54,7 +95,6 @@ Template: blankslate
 
 #page-content-wrapper {
 	width: 100%;
-	padding: 15px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -62,6 +102,21 @@ Template: blankslate
 }
 
 /* Sidebar Styles */
+#menu-toggle img{
+  position: absolute; top: 50%; width: 60px; z-index: 9999;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#menu-toggle.toggled img{
+  position: absolute; top: 50%; left: 0; width: 60px; z-index: 9999;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 
 .sidebar-nav {
     position: absolute;
@@ -109,31 +164,21 @@ Template: blankslate
     background: none;
 }
 
-@media(min-width:968px) {
-    #wrapperr {
-        padding-left: 550px;
-    }
+#menu-toggle img{
+  position: absolute; top: 50%; left: 0; width: 60px; z-index: 9999;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 
-    #wrapperr.toggled {
-        padding-left: 0;
-    }
 
-    #sidebar-wrapper {
-        width: 550px;
-    }
-
-    #wrapperr.toggled #sidebar-wrapper {
-        width: 0;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-
-    }
-
-    #wrapperr.toggled #page-content-wrapper {
-        margin-right: 0;
-    }
+#menu-toggle.toggled img{
+  position: absolute; top: 50%; left: 520px; width: 60px; z-index: 9999;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 *{
@@ -146,21 +191,46 @@ padding:0;
 }
 
 .main-content{
-	max-width:1280px;
 min-height:100%;
 margin:0 auto;
 position:relative;
 }
 
 footer{
-	background:#ccc;
+	background:#FFF;
 position:absolute;
 bottom:0;
+left: 0;
 width:100%;
-padding-top:50px;
-height:50px;
+text-align: center;
+height: 56px;
+overflow: hidden;
 }
 
 footer li{
 		display: inline;
+    font-style: normal;
+      margin-right: 60px;
+      margin-left: 60px;
+}
+
+footer li a{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 20px;
+}
+
+footer li a:hover {
+  color: black;
+}
+
+.search-font{
+  font-size: 10px;
+  text-align: left;
+  float: left;
+}
+
+input + [name]{
+  display: none;
 }
