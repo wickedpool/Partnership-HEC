@@ -18,14 +18,22 @@ Template: blankslate
  header{
    background-color: #FFF;
    height: 100px;
-   position: relative;
-   top: -20px;
+   position: absolute;
+   width: 100%;
+   top: 0;
  }
 
 
 #site-title a{
   color: #F35919;
 }
+
+.btn-warning{
+position: absolute;
+top: 20%;
+  right: 10px;
+}
+
  body.home{
        background:url(images/meeting_room.jpg) no-repeat;
        height: 100%;
@@ -38,7 +46,7 @@ Template: blankslate
  .home .entry-content {
    font-size: 40px;
    text-align: center;
-   margin-top: 40%;
+   margin-top: 450px;
    color: white;
  }
 
@@ -209,6 +217,8 @@ footer li{
 footer li a{
   text-decoration: none;
   color: black;
+  position: relative;
+  top: 20px;
 }
 
 footer li a:hover {
