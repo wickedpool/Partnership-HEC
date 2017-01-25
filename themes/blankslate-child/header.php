@@ -21,18 +21,18 @@
 					<h4 class="modal-title">Referencer</h4>
 			</div>
 			<div class="modal-body">
-				<p class="lead">Please get in touch!</p>
+				<p class="lead">Veuillez entrer les elements necessaires au referencement de votre salle</p>
 				<form method="post" id="myForm">
 					<div class="form-group">
-						<label for="name">Your name:</label>
+						<label for="name">Nom:</label>
 						<input type="text" name="name" id="name" class="form-control" placeholder="Name" value="" required/>
 					</div>
 					<div class="form-group">
-						<label for="email">Your email:</label>
+						<label for="email">Email:</label>
 						<input type="email" name="email" id="email" class="form-control" placeholder="Email" value="" required/>
 					</div>
 						<div class="form-group">
-						<label for="comment">Your comment:</label>
+						<label for="comment">Description:</label>
 						<textarea class="form-control" id="comment" name="comment" required></textarea>
 					</div>
 					<input type="submit" name="submit" class="btn btn-success btn-lg" value="submit">
