@@ -24,7 +24,7 @@
 			</div>
 			<div class="modal-body">
 				<p class="lead">Veuillez entrer les elements necessaires au referencement de votre salle</p>
-				<form method="post" id="myForm">
+				<form id="myForm" action="http://localhost:8888/wordpress/">
 					<div class="form-group">
 						<label for="name">Nom de l'etablissement:</label>
 						<input type="text" name="name" id="name" class="form-control" placeholder="Nom" value="" required/>
@@ -44,8 +44,8 @@
 							<input type="radio" name="gender" value="chateau"> Château<br>
 							<input type="radio" name="gender" value="restaurant" > Restaurant<br>
 							<input type="radio" name="gender" value="congres"> Centre de congrès<br>
-							Autre:<br>
-								<input type="text" name="Autre" value=""><br><br>
+							<input type="radio" name="gender" value="congres"> Autre<br>
+							<input type="text" name="Autre" value=""><br><br>
 					</div>
 					<div class="form-group">
 						<label for="comment">Description:</label>
