@@ -257,11 +257,16 @@ padding:0;
 
 .main-content{
 min-height:100%;
-margin:0 auto;
+margin:0;
 position:relative;
 }
 
-footer{
+.pagecontent{
+  margin: 0 auto;
+  padding-top: 64px;
+  width: 100%;}
+
+.footer_main{
 	background:#FFF;
 position:absolute;
 bottom:0;
