@@ -24,7 +24,7 @@
 			</div>
 			<div class="modal-body">
 				<p class="lead">Veuillez entrer les elements necessaires au referencement de votre salle</p>
-				<form method="post" id="myForm">
+				<form id="myForm" action="http://localhost:8888/wordpress/">
 					<div class="form-group">
 						<label for="name">Nom de l'etablissement:</label>
 						<input type="text" name="name" id="name" class="form-control" placeholder="Nom" value="" required/>
