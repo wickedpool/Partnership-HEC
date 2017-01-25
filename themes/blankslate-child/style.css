@@ -11,9 +11,50 @@ Template: blankslate
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+ .widget-title{
+   color: #F35919;
+   text-transform: uppercase;
+ }
+
+ .form-style-8{
+     font-family: 'Open Sans Condensed', arial, sans;
+     width: 700px;
+     padding: 30px;
+     background: #FFFFFF;
+     margin: 50px auto;
+
+ }
+
+ .form-style-8 input[type="text"],
+ .form-style-8 input[type="email"],
+ .form-style-8 input[type="tel"],
+ .form-style-8 input[type="subject"],
+ .form-style-8 input[type="message"],
+  .form-style-8 input[type="number"],
+ .form-style-8 textarea,
+ .form-style-8 select
+ {
+     box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     outline: none;
+     display: block;
+     width: 100%;
+     padding: 7px;
+     border: none;
+     border-bottom: 2px solid #ddd;
+     background: transparent;
+     margin-bottom: 10px;
+     font: 16px Arial, Helvetica, sans-serif;
+     color: black;
+ }
+
+
+
  body {
     overflow-x: hidden;
  }
+
 
  header{
    background-color: #FFF;
@@ -24,15 +65,30 @@ Template: blankslate
 
  }
 
+.btn-head1{
+  position: absolute;
+  left: 4%;
+  top: 20%;
+}
+
+.btn-head2{
+  position: absolute;
+  right: 4%;
+  top: 20%;
+}
+.btn-head3{
+  position: absolute;
+  right: 14%;
+  top: 20%;
+}
+
+.btn-2{
+  color: #95989A;
+}
+
 
 #site-title a{
   color: #F35919;
-}
-
-.btn-warning{
-position: absolute;
-top: 20%;
-  right: 10px;
 }
 
  body.home{
@@ -53,6 +109,8 @@ top: 20%;
 
  #site-title{
  	text-align: center;
+  vertical-align: middle;
+  margin: auto;
  }
 
 /* Toggle Styles */
@@ -66,7 +124,7 @@ top: 20%;
 
 
 #wrapperr.toggled >   #menu-toggle img{
-    position: absolute; top: 50%; left: 500px; width: 60px; z-index: 9999;
+    position: absolute; top: 50%; left: 520px; width: 60px; z-index: 9999;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
