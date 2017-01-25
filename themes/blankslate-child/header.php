@@ -44,8 +44,8 @@
 							<input type="radio" name="gender" value="chateau"> Château<br>
 							<input type="radio" name="gender" value="restaurant" > Restaurant<br>
 							<input type="radio" name="gender" value="congres"> Centre de congrès<br>
-							Autre:<br>
-								<input type="text" name="Autre" value=""><br><br>
+							<input type="radio" name="gender" value="congres"> Autre<br>
+							<input type="text" name="Autre" value=""><br><br>
 					</div>
 					<div class="form-group">
 						<label for="comment">Description:</label>
