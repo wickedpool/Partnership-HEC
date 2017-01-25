@@ -9,6 +9,13 @@ function wpm_enqueue_styles(){
 add_action( 'wp_enqueue_scripts', 'wpm_enqueue_styles');
 ?>
 <?php
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+ ?>
+<?php
 if( !defined(THEME_IMG_PATH)){
 	define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/images/equipements/' );
 }
