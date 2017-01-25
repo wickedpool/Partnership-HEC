@@ -1,10 +1,13 @@
 <div id="wrapperr">
-	<div id="sidebar-wrapper">
-		<ul class="sidebar-nav">
-			<?php get_sidebar(); ?>
-		</ul>
-		</div>
-  <div class="container">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<?php get_sidebar(); ?>
+</ul>
+</div>
+<a href="#menu-toggle" id="menu-toggle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-closed.png" /> </a>
+<div class="main-content">
+<div class="pagecontent">
+<div id="page-content-wrapper">
 <?php get_header(); ?>
 <section id="content" role="main">
 <?php if ( have_posts() ) : ?>
@@ -27,6 +30,15 @@
 </article>
 <?php endif; ?>
 </section>
-<?php get_footer(); ?>
-	</div>
 </div>
+</div>
+<div class="foo">
+<?php get_footer(); ?>
+</div>
+</div>
+<script>
+$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapperr").toggleClass("toggled");
+		});
+</script>

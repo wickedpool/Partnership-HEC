@@ -9,11 +9,17 @@ function wpm_enqueue_styles(){
 add_action( 'wp_enqueue_scripts', 'wpm_enqueue_styles');
 ?>
 <?php
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+ ?>
+<?php
 if( !defined(THEME_IMG_PATH)){
 	define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/images/equipements/' );
 }
 ?>
-
 <?php
 add_filter( 'query_vars', 'willy_add_query_vars' );
 function willy_add_query_vars( $vars ){
@@ -24,7 +30,6 @@ function willy_add_query_vars( $vars ){
 	$vars[] = "equipements";
 	return $vars;
 }
-
 function msk_add_love_product_tab($tabs) {
 
 	$tabs['love_tab'] = array(
@@ -34,21 +39,18 @@ function msk_add_love_product_tab($tabs) {
 			);
 
 	return $tabs;
-
 }
 add_filter('woocommerce_product_tabs', 'msk_add_love_product_tab');
 
 function msk_add_love_product_tab_content() {
 	wc_get_template('single-product/tabs/love-product.php');
 }
-
 function msk_remove_additionalinfo_tab($tabs) {
 	unset($tabs['additional_information']);
 	$tabs['description']['title'] = __('Details', 'msk');
 	$tabs['reviews']['title'] = __( 'Clients reviews', 'msk' );
 
 	$tabs['description']['priority'] = 50;
-
 	return $tabs;
 }
 add_filter('woocommerce_product_tabs', 'msk_remove_additionalinfo_tab', 10);
@@ -69,7 +71,6 @@ function msk_add_loves_hates_fields_to_product() {
 				'desc_tip' => true
 				)
 			);
-
 	woocommerce_wp_text_input(
 			array(
 				'id' => 'hates',
@@ -82,8 +83,6 @@ function msk_add_loves_hates_fields_to_product() {
 			);
 }
 add_action('woocommerce_product_options_advanced', 'msk_add_loves_hates_fields_to_product');
-
-
 /*************************************************************************************************
  * On enregistre les valeurs de LOVES & HATES lorsqu'on enregistre un post
  *************************************************************************************************/
@@ -110,9 +109,7 @@ add_action('save_post', 'msk_save_loves_hates_product_fields', 10, 3);
 
 function msk_add_test_field_data() {
 	echo '<div style="background:#f8fbca; padding:1em;">';
-
 	echo '<h4>Testons les différents types de champs</h4>';
-
 	// presentation
 	woocommerce_wp_text_input(
 			array(
@@ -123,7 +120,6 @@ function msk_add_test_field_data() {
 				'desc_tip' => false // Si "true", la description s'affichera en infobulle
 				)
 			);
-
 	woocommerce_wp_text_input(
 			array(
 				'id' => 'telephone',
@@ -134,7 +130,6 @@ function msk_add_test_field_data() {
 				'desc_tip' => true
 				)
 			);
-
 	woocommerce_wp_text_input(
 			array(
 				'id' => 'situation',
@@ -144,7 +139,6 @@ function msk_add_test_field_data() {
 				'desc_tip' => false // Si "true", la description s'affichera en infobulle
 				)
 			);
-
 	woocommerce_wp_text_input(
 			array(
 				'id' => 'capacite',
@@ -155,7 +149,6 @@ function msk_add_test_field_data() {
 				'desc_tip' => true
 				)
 			);
-
 	woocommerce_wp_radio(
 			array(
 				'id' => 'reponse',
@@ -170,33 +163,26 @@ function msk_add_test_field_data() {
 			);
 	echo '</div>';
 }
-
 add_action('woocommerce_product_options_general_product_data', 'msk_add_test_field_data');
-
 function msk_save_hotel_fields($product_id, $post, $update) {
 	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
-
 	if ($post->post_type == 'product') {
 		if (isset($_POST['presentation'])) {
 			$loves = $_POST['presentation'];
 			update_post_meta($product_id, 'presentation', $loves);
 		}
-
 		if (isset($_POST['situation'])) {
 			$hates = $_POST['situation'];
 			update_post_meta($product_id, 'situation', $hates);
 		}
-
 		if (isset($_POST['telephone'])) {
 			$hates = $_POST['telephone'];
 			update_post_meta($product_id, 'telephone', $hates);
 		}
-
 		if (isset($_POST['capacite'])) {
 			$hates = $_POST['capacite'];
 			update_post_meta($product_id, 'capacite', $hates);
 		}
-
 		if (isset($_POST['reponse'])) {
 			$hates = $_POST['reponse'];
 			update_post_meta($product_id, 'reponse', $hates);
@@ -204,5 +190,4 @@ function msk_save_hotel_fields($product_id, $post, $update) {
 	}
 }
 add_action('save_post', 'msk_save_hotel_fields', 10, 3);
-
 ?>
