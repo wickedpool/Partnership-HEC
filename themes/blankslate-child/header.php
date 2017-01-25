@@ -21,18 +21,32 @@
 					<h4 class="modal-title">Referencer</h4>
 			</div>
 			<div class="modal-body">
-				<p class="lead">Please get in touch!</p>
+				<p class="lead">Veuillez entrer les elements necessaires au referencement de votre salle</p>
 				<form method="post" id="myForm">
 					<div class="form-group">
-						<label for="name">Your name:</label>
-						<input type="text" name="name" id="name" class="form-control" placeholder="Name" value="" required/>
+						<label for="name">Nom de l'etablissement:</label>
+						<input type="text" name="name" id="name" class="form-control" placeholder="Nom" value="" required/>
 					</div>
 					<div class="form-group">
-						<label for="email">Your email:</label>
+						<label for="name">Adresse de l'etablissement:</label>
+						<input type="text" name="adresse" id="name" class="form-control" placeholder="Adresse" value="" required/>
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
 						<input type="email" name="email" id="email" class="form-control" placeholder="Email" value="" required/>
 					</div>
-						<div class="form-group">
-						<label for="comment">Your comment:</label>
+					<div>
+						<label for="radio">Type d'etablissement</label><br>
+							<input type="radio" name="gender" value="hotel" checked> Hotel<br>
+							<input type="radio" name="gender" value="bateau"> Bateau<br>
+							<input type="radio" name="gender" value="chateau"> Château<br>
+							<input type="radio" name="gender" value="restaurant" > Restaurant<br>
+							<input type="radio" name="gender" value="congres"> Centre de congrès<br>
+							Autre:<br>
+								<input type="text" name="Autre" value=""><br><br>
+					</div>
+					<div class="form-group">
+						<label for="comment">Description:</label>
 						<textarea class="form-control" id="comment" name="comment" required></textarea>
 					</div>
 					<input type="submit" name="submit" class="btn btn-success btn-lg" value="submit">
