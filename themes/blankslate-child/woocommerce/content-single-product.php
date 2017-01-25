@@ -22,64 +22,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<?php
-	/**
-	 * woocommerce_before_single_product hook.
-	 *
-	 * @hooked wc_print_notices - 10
-	 */
-	 do_action( 'woocommerce_before_single_product' );
-
-	 if ( post_password_required() ) {
-	 	echo get_the_password_form();
-	 	return;
-	 }
-?>
-
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php
-		/**
-		 * woocommerce_before_single_product_summary hook.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
-
-		<?php
-			/**
-			 * woocommerce_single_product_summary hook.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 */
-			do_action( 'woocommerce_single_product_summary' );
-		?>
-
-	</div><!-- .summary -->
-
-	<?php
-		/**
-		 * woocommerce_after_single_product_summary hook.
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
-	?>
-
-	<meta itemprop="url" content="<?php the_permalink(); ?>" />
-
-</div><!-- #product-<?php the_ID(); ?> -->
-
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+<div class="container single-product" >
+	<div class="row">
+		<h1><?php	echo  get_post( $id )->post_title; ?></h1>
+	</div>
+</div>
+<div classe="container">
+	<div class ="row" id="product">
+		<div class "row picture-hotel" id="im_produit">
+		<?php  do_action( 'woocommerce_before_single_product_summary' ); // photo ?>
+			<div class="col-md-offset-2 col-md-7 content-hotel">
+				<h2>description</h2>
+				<?php echo the_content(); ?>
+			</div>
+			<div class="col-md-offset-2 col-md-7 content-hotel">
+				<h2>presentation </h2>
+				<?php echo get_post_meta( $id, 'presentation', true); ?>
+			</div>
+			<div class="col-md-offset-2 col-md-7 content-hotel">
+				<h2>situationn</h2>
+				<?php echo get_post_meta( $id, 'situation', true);?>
+			</div>
+			<div class="col-md-offset-2 col-md-7 content-hotel">
+				<h2>Telephone </h2>
+				<?php echo get_post_meta( $id, 'telephone', true); ?>
+			</div>
+				<h2>Capacite</h2>
+				<?php echo get_post_meta( $id, 'capacite', true);?>
+			</div>
+		</div>
+	</div>
+</div>
