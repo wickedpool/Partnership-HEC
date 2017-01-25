@@ -15,7 +15,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button class="close" type="button" data-dismiss="modal">×</button>
-                    <h4 class="modal-title">My Title in a Modal Window</h4>
+                    <h4 class="modal-title">CONNEXION</h4>
             </div>
             <div class="modal-body">
               <?php wp_login_form( $args );
