@@ -21,6 +21,11 @@ if( !defined(THEME_IMG_PATH)){
 }
 ?>
 <?php
+if( !defined(THEME_IMG_PATH_BASIC)){
+	define( 'THEME_IMG_PATH_BASIC', get_stylesheet_directory_uri() . '/images/' );
+}
+?>
+<?php
 add_filter( 'query_vars', 'willy_add_query_vars' );
 function willy_add_query_vars( $vars ){
 	$vars[] = "ville";

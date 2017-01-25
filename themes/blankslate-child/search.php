@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <div id="wrapperr">
 <div id="sidebar-wrapper">
 <ul class="sidebar-nav">
@@ -8,7 +9,9 @@
 <div class="main-content">
 <div class="pagecontent">
 <div id="page-content-wrapper">
-<?php get_header(); ?>
+<div class="container">
+	<div class="row">
+		<div style="position:relative;top:200px;">
 <section id="content" role="main">
 <?php if ( have_posts() ) : ?>
 <header class="header">
@@ -16,6 +19,8 @@
 </header>
 <?php while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'entry' ); ?>
+<?php $img_url = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
+	<img style="width:500px;height:auto;" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
 <?php endwhile; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
 <?php else : ?>
@@ -32,8 +37,12 @@
 </section>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="foo">
 <?php get_footer(); ?>
+</div>
 </div>
 </div>
 <script>

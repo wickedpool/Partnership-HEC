@@ -14,11 +14,13 @@ Template: blankslate
  .widget-title{
    color: #F35919;
    text-transform: uppercase;
+   text-align: center;
+   font-size: 35px;
  }
 
  .form-style-8{
      font-family: 'Open Sans Condensed', arial, sans;
-     width: 700px;
+     width: 900px;
      padding: 30px;
      background: #FFFFFF;
      margin: 50px auto;
@@ -44,7 +46,7 @@ Template: blankslate
      border: none;
      border-bottom: 2px solid #ddd;
      background: transparent;
-     margin-bottom: 10px;
+     margin-bottom: 50px;
      font: 16px Arial, Helvetica, sans-serif;
      color: black;
  }
@@ -56,12 +58,13 @@ Template: blankslate
  }
 
 
- header{
+ .main-header{
    background-color: #FFF;
    height: 100px;
-   position: absolute;
+   position: fixed;
    width: 100%;
-   top: 1px;
+   top: 0;
+   z-index: 99;
 
  }
 
@@ -107,6 +110,7 @@ Template: blankslate
    color: white;
  }
 
+
  #site-title{
  	text-align: center;
   vertical-align: middle;
@@ -124,7 +128,7 @@ Template: blankslate
 
 
 #wrapperr.toggled >   #menu-toggle img{
-    position: absolute; top: 50%; left: 520px; width: 60px; z-index: 9999;
+    position: fixed; top: 50%; left: 520px; width: 60px; z-index: 9999;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -152,6 +156,8 @@ Template: blankslate
     width: 550px;
 }
 
+
+
 #page-content-wrapper {
 	width: 100%;
 }
@@ -162,7 +168,7 @@ Template: blankslate
 
 /* Sidebar Styles */
 #menu-toggle img{
-  position: absolute; top: 50%; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -170,7 +176,7 @@ Template: blankslate
 }
 
 #menu-toggle.toggled img{
-  position: absolute; top: 50%; left: 0; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -224,7 +230,7 @@ Template: blankslate
 }
 
 #menu-toggle img{
-  position: absolute; top: 50%; left: 0; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -233,7 +239,7 @@ Template: blankslate
 
 
 #menu-toggle.toggled img{
-  position: absolute; top: 50%; left: 520px; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; left: 520px; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -284,7 +290,16 @@ footer li a:hover {
   color: black;
 }
 
+.search-confirm-button{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+}
+
 .search-font{
+  position: relative;
   font-size: 10px;
   text-align: left;
   float: left;
