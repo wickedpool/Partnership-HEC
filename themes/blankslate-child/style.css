@@ -11,14 +11,21 @@ Template: blankslate
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+ html, body{
+    height:100%;width:100%;
+ }
+
  .widget-title{
    color: #F35919;
    text-transform: uppercase;
+   text-align: center;
+   font-size: 35px;
+   margin-top: 60px;
  }
 
  .form-style-8{
      font-family: 'Open Sans Condensed', arial, sans;
-     width: 700px;
+     width: 900px;
      padding: 30px;
      background: #FFFFFF;
      margin: 50px auto;
@@ -44,7 +51,7 @@ Template: blankslate
      border: none;
      border-bottom: 2px solid #ddd;
      background: transparent;
-     margin-bottom: 10px;
+     margin-bottom: 50px;
      font: 16px Arial, Helvetica, sans-serif;
      color: black;
  }
@@ -52,16 +59,17 @@ Template: blankslate
 
 
  body {
-    overflow-x: hidden;
+
  }
 
 
- header{
+ .main-header{
    background-color: #FFF;
    height: 100px;
-   position: absolute;
+   position: fixed;
    width: 100%;
-   top: 1px;
+   top: 0;
+   z-index: 9999;
 
  }
 
@@ -73,17 +81,18 @@ Template: blankslate
 
 .btn-head2{
   position: absolute;
-  right: 4%;
+  right: 4vh;
   top: 20%;
 }
 .btn-head3{
   position: absolute;
-  right: 14%;
+  right: 20vh;
   top: 20%;
 }
 
 .btn-2{
   color: #95989A;
+      font-size: 10em;
 }
 
 
@@ -92,20 +101,34 @@ Template: blankslate
 }
 
  body.home{
-       background:url(images/meeting_room.jpg) no-repeat;
+       background:url(images/meeting_room.jpg);
        height: 100%;
+       width: 100%;
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;
        background-size: cover;
  }
 
+ body{
+       background:url(images/meeting_room-light.jpg);
+       height: 100%;
+       width: 100%;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+ }
+
+
+
  .home .entry-content {
    font-size: 40px;
    text-align: center;
-   margin-top: 450px;
+   margin-top: 43vh;
    color: white;
  }
+
 
  #site-title{
  	text-align: center;
@@ -124,7 +147,7 @@ Template: blankslate
 
 
 #wrapperr.toggled >   #menu-toggle img{
-    position: absolute; top: 50%; left: 520px; width: 60px; z-index: 9999;
+    position: fixed; top: 50%; left: 520px; width: 60px; z-index: 9999;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -152,6 +175,8 @@ Template: blankslate
     width: 550px;
 }
 
+
+
 #page-content-wrapper {
 	width: 100%;
 }
@@ -162,7 +187,7 @@ Template: blankslate
 
 /* Sidebar Styles */
 #menu-toggle img{
-  position: absolute; top: 50%; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -170,7 +195,7 @@ Template: blankslate
 }
 
 #menu-toggle.toggled img{
-  position: absolute; top: 50%; left: 0; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -224,7 +249,7 @@ Template: blankslate
 }
 
 #menu-toggle img{
-  position: absolute; top: 50%; left: 0; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -233,7 +258,7 @@ Template: blankslate
 
 
 #menu-toggle.toggled img{
-  position: absolute; top: 50%; left: 520px; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; left: 520px; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -246,16 +271,23 @@ padding:0;
 }
 
 #wrapperr{
+  position: absolute;
+  width: 100%;
 	height:100%;
 }
 
 .main-content{
 min-height:100%;
-margin:0 auto;
+margin:0;
 position:relative;
 }
 
-footer{
+.pagecontent{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer_main{
 	background:#FFF;
 position:absolute;
 bottom:0;
@@ -263,7 +295,6 @@ left: 0;
 width:100%;
 text-align: center;
 height: 56px;
-overflow: hidden;
 }
 
 footer li{
@@ -284,11 +315,75 @@ footer li a:hover {
   color: black;
 }
 
+.search-confirm-button{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+}
+
 .search-font{
+  position: relative;
   font-size: 10px;
   text-align: left;
   float: left;
 }
+
+.articles-search{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+.recherche-title p {
+  color: #F35919;
+  border: 1px solid #F35919;
+  width: 225px;
+  height: 60px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.my-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #F35919;
+}
+.my-container article {
+    position: absolute;
+    z-index: 2;
+    display: none;
+
+}
+
+.my-container:hover article{
+  display: block;
+}
+
+.my-container img {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.my-container:hover img{
+    opacity: 0.4;
+}
+
+.my-container img:hover {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
 
 input + [name]{
   display: none;

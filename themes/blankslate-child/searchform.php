@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                  	<input class="form-input" type="text" name="s" placeholder="Ville / Nom du lieu" value="<?php the_search_query(); ?>" id="s">
+                    <input class="form-input" type="text" name="s" placeholder="Ville / Nom de lieu" value="<?php the_search_query(); ?>" id="s">
                 <div class="help-block with-errors"></div>
             </div>
         </div>
@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                    <input class="form-input" type="text" name="s" placeholder="Date" value="<?php the_search_query(); ?>" id="s">
+                    <input class="form-group" type="text" placeholder="Date">
                 <div class="help-block with-errors"></div>
             </div>
         </div>
@@ -49,7 +49,7 @@ $equips = array(
   'paperboard' => __( 'Paperboard' ),
   'tableau' => __( 'Tableau' ),
   'projecteur-ecran' => __( 'Projecteur' ),
-  'photocopieuse' => __( 'Photocopieuse' ),
+  'photocopieuse' => __( 'P-copieuse' ),
   'regie-son' => __( 'son' ),
   'regie-lumiere' => __( 'lumière' ),
   'cafetariat' => __( 'Cafétariat' ),
@@ -58,20 +58,22 @@ $equips = array(
     ?>
     <?php
         $num = 1;
-        $breaker = 5; //How many cols inside a row?
+        $breaker = 3; //How many cols inside a row?
         foreach ( $equips as $key => $equip ) {
             if ($num == 1) echo '<div class="row">'; //First col, so open the row.
 
-                echo '<div class="col-xs-2"> <input type="checkbox" name="equipements[]" class="checkbox-equip" '
-                . 'id="equipment[' . $key . ']" value="' . $key . '"> <label for="equipment[' . $key . ']"><p class = "search-font">' . $equip . '</p><img src="';echo THEME_IMG_PATH. $key .'.png"/></label> </div>';
+                echo '<div class="col-xs-2"> <input type="checkbox" name="equipements[]" class="" '
+                . 'id="equipment[' . $key . ']" value="' . $key . '"> <label for="equipment[' . $key . ']"><img src="';echo THEME_IMG_PATH. $key .'.png"/><br/><p class = "search-font">' . $equip . '</p></label></div>';
             $num++;
             if ($num > $breaker) { echo '</div>'; $num = 1; } // The num arrived at the break-point. Close the row!
         }
     ?>
   </div>
     <div class="row">
-      <div class="col-xs-offset-1">
-	<button type="submit">Rechercher</button>
+      <div class="col-xs-offset-2">
+	<?php echo '<button class="search-confirm-button" type="submit"><img src="';
+  echo THEME_IMG_PATH_BASIC.'Groupe_488.png "/></button>';
+  ?>
 </div>
 </div>
 </form>
