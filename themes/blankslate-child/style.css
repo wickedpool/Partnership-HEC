@@ -357,10 +357,9 @@ footer li a:hover {
 
 .my-container {
     position: relative;
-    margin-bottom: 30px;
-    width: 270px;
     height:auto;
     margin: auto;
+    margin-bottom: 30px;
     text-align:center;
     position:relative;
     background-color: #F35919;
