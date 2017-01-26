@@ -15,6 +15,26 @@ Template: blankslate
     height:100%;width:100%;
  }
 
+
+ .go-back{
+   position: fixed;
+   left: 100px;
+   top: 15%;
+   font-size: 20px;
+   z-index: 9999;
+   text-decoration: none;
+   color: #F35919;
+ }
+
+ .go-back:hover{
+   position: fixed;
+   left: 100px;
+   top: 15%;
+   font-size: 20px;
+   z-index: 9999;
+   color: #F35919;
+ }
+
  .widget-title{
    color: #F35919;
    text-transform: uppercase;

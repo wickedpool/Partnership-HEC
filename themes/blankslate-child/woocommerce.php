@@ -5,6 +5,7 @@
 </ul>
 </div>
 <a href="#menu-toggle" id="menu-toggle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-closed.png" /> </a>
+<a class="go-back" href="javascript:history.back()"><p> < RETOUR</p></a>
 <?php get_header(); ?>
 <div class="main-content-shop">
 <div class="pagecontent">
