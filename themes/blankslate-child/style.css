@@ -358,31 +358,27 @@ footer li a:hover {
 .my-container {
     position: relative;
     margin-bottom: 30px;
-    overflow: hidden;
+    width: 270px;
+    height:auto;
+    margin: auto;
+    text-align:center;
+    position:relative;
     background-color: #F35919;
 }
 .my-container article {
     position: absolute;
+    margin: auto;
     z-index: 2;
     display: none;
-    text-align: center;
+    height: 100px;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
     color: white;
     text-decoration: none;
-    bottom: 35%;
+    background-color: blue;
 
-}
-
-
-@media screen and (max-width: 808px) {
-  .my-container article {
-      position: absolute;
-      z-index: 2;
-      display: none;
-      text-align: center;
-      color: white;
-      text-decoration: none;
-      bottom: 50%;
-  }
 }
 
 .my-container h2 {
