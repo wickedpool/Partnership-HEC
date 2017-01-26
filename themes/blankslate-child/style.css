@@ -57,12 +57,6 @@ Template: blankslate
  }
 
 
-
- body {
-
- }
-
-
  .main-header{
    background-color: #FFF;
    height: 100px;
@@ -162,6 +156,7 @@ Template: blankslate
     width: 0;
     height: 100%;
     margin-left: -550px;
+    padding-left: 40px;
     overflow-y: auto;
     background: #fff;
 		border-right: 6.5px solid #F35919;
@@ -188,6 +183,7 @@ Template: blankslate
 /* Sidebar Styles */
 #menu-toggle img{
   position: fixed; top: 50%; width: 60px; z-index: 9999;
+  left: 40px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -196,6 +192,7 @@ Template: blankslate
 
 #menu-toggle.toggled img{
   position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
+    left: 40px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -249,7 +246,7 @@ Template: blankslate
 }
 
 #menu-toggle img{
-  position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; left: 15px; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -279,6 +276,13 @@ padding:0;
 .main-content{
 min-height:100%;
 margin:0;
+position:relative;
+}
+
+.main-content-shop{
+min-height:100%;
+margin:0;
+margin-top: 100px;
 position:relative;
 }
 
@@ -422,6 +426,33 @@ font-size: 1.5em;
     width: 100%;
     height: auto;
     opacity: 0.7;
+}
+
+#product{
+  background-color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.row-single{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.content-hotel-all{
+  background-color: white;
+}
+
+.content-hotel h2{
+  font-size: 16px;
+}
+
+.content-hotel-content h2{
+  opacity: 0.7;
+  font-size: 16px;
+
 }
 
 
