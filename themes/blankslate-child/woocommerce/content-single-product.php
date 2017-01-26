@@ -47,13 +47,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 		<div class="row row-single">
-			<div class="col-md-offset-0 col-md-6 content-hotel">
+			<div class="col-md-offset-0 col-sm-2 content-hotel">
 				<h2>telephone</h2>
 				<?php echo get_post_meta( $id, 'telephone', true);?>
 			</div>
 		</div>
 		<div class="row row-single">
-			<div class="col-md-offset-0 col-md-6 content-hotel">
+			<div class="col-md-offset-0 col-sm-2 content-hotel">
 				<h2>situation geographique</h2>
 				<div class="col-sm-5 content-hotel-content">
 					<h2><?php echo get_post_meta( $id, 'situation', true); ?></h2>
@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 		<div class="row row-single">
-			<div class="col-md-offset-0 col-md-6 content-hotel">
+			<div class="col-md-offset-0 col-sm-2 content-hotel">
 				<h2>Capacite</h2>
 				<div class="col-sm-5 content-hotel-content">
 					<h2><?php echo get_post_meta( $id, 'capacite', true);?></h2>
