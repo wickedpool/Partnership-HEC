@@ -10,7 +10,7 @@
 <div id="wrapper" class="hfeed">
 <header class="main-header" id="header" role="banner">
   <section id="branding">
-  <div id="site-title"><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?></div>
+  <div id="site-title"><a href = "<?php echo get_option('home'); ?>/" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" /></a></div>
   </section>
 <!-- Bouton referencer salle -->
 
