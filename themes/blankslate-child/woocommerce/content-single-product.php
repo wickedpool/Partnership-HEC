@@ -69,6 +69,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h2>Type d'etablissement</h2>
 				<?php echo get_post_meta( $id, 'type', true);?>
 			</div>
+			<div class="col-md-offset-10 col-md-3 content-hotel">
+				<a href="<?php echo WC()->cart->get_cart_url(); ?>"><img style="width:100px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cart-img.png" /></a>
+			</div>
 		</div>
 		</div>
 	</div>

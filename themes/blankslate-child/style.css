@@ -125,6 +125,7 @@ Template: blankslate
 
 
  #site-title{
+   padding-top: 8px;
  	text-align: center;
   vertical-align: middle;
   margin: auto;
@@ -282,7 +283,7 @@ position:relative;
 .main-content-shop{
 min-height:100%;
 margin:0;
-margin-top: 100px;
+margin-top: 150px;
 position:relative;
 }
 
