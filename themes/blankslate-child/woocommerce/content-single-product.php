@@ -55,13 +55,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="row row-single">
 			<div class="col-md-offset-0 col-md-6 content-hotel">
 				<h2>situation geographique</h2>
-				<?php echo get_post_meta( $id, 'situation', true); ?>
+				<div class="col-sm-5 content-hotel-content">
+					<h2><?php echo get_post_meta( $id, 'situation', true); ?></h2>
+			</div>
 			</div>
 		</div>
 		<div class="row row-single">
 			<div class="col-md-offset-0 col-md-6 content-hotel">
 				<h2>Capacite</h2>
-				<?php echo get_post_meta( $id, 'capacite', true);?>
+				<div class="col-sm-5 content-hotel-content">
+					<h2><?php echo get_post_meta( $id, 'capacite', true);?></h2>
+			</div>
 			</div>
 		</div>
 		<div class="row row-single">
