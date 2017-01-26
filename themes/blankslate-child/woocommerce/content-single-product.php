@@ -40,37 +40,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h2><?php	echo  get_post( $id )->post_title; ?></h2>
 		</div>
 	</div>
-		<div class="row row-single">
-			<div class="col-sm-2 content-hotel">
+	<div class="row row-single">
+		<div class="col-sm-2 content-hotel">
 				<h2>presentation </h2>
-			</div>
-				<?php echo get_post_meta( $id, 'presentation', true); ?>
-			</div>
 		</div>
-		<div class="row row-single">
-			<div class="col-sm-2 content-hotel">
-				<h2>telephone</h2>
-			</div>
-				<?php echo get_post_meta( $id, 'telephone', true);?>
-			</div>
-		</div>
-		<div class="row row-single">
-			<div class="col-sm-2 content-hotel">
-				<h2>situation geographique</h2>
-			</div>
-				<div class="col-sm-5 content-hotel-content">
-					<h2><?php echo get_post_meta( $id, 'situation', true); ?></h2>
-			</div>
-		</div>
-		<div class="row row-single">
-			<div class="col-md-offset-0 col-sm-2 content-hotel">
-				<h2>Capacite</h2>
-			</div>
-				<div class="col-sm-5 content-hotel-content">
-					<h2><?php echo get_post_meta( $id, 'capacite', true);?></h2>
-			</div>
-			</div>
-		</div>
+		<div class="col-sm-5 content-hotel-content">
+			<h2><?php echo get_post_meta( $id, 'presentation', true); ?></h2>
+	</div>
+</div>
+<div class="row row-single">
+	<div class="col-sm-2 content-hotel">
+		<h2>telephone</h2>
+	</div>
+	<div class="col-sm-5 content-hotel-content">
+		<h2><?php echo get_post_meta( $id, 'telephone', true);?></h2>
+</div>
+</div>
+<div class="row row-single">
+	<div class="col-sm-4 content-hotel">
+		<h2>situation geographique</h2>
+	</div>
+	<div class="col-sm-5 content-hotel-content">
+	<h2>	<?php echo get_post_meta( $id, 'situation', true); ?></h2>
+</div>
+</div>
+<div class="row row-single">
+	<div class="col-sm-2 content-hotel">
+		<h2>Capacite</h2>
+	</div>
+	<div class="col-sm-5 content-hotel-content">
+	<h2>	<?php echo get_post_meta( $id, 'capacite', true);?></h2>
+</div>
+</div>
 		<div class="row row-single">
 			<div class="col-md-offset-0 col-md-6 content-hotel">
 				<h2>Type d'etablissement</h2>
