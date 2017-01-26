@@ -15,6 +15,26 @@ Template: blankslate
     height:100%;width:100%;
  }
 
+
+ .go-back{
+   position: fixed;
+   left: 100px;
+   top: 15%;
+   font-size: 20px;
+   z-index: 9999;
+   text-decoration: none;
+   color: #F35919;
+ }
+
+ .go-back:hover{
+   position: fixed;
+   left: 100px;
+   top: 15%;
+   font-size: 20px;
+   z-index: 9999;
+   color: #F35919;
+ }
+
  .widget-title{
    color: #F35919;
    text-transform: uppercase;
@@ -54,12 +74,6 @@ Template: blankslate
      margin-bottom: 50px;
      font: 16px Arial, Helvetica, sans-serif;
      color: black;
- }
-
-
-
- body {
-
  }
 
 
@@ -131,6 +145,7 @@ Template: blankslate
 
 
  #site-title{
+   padding-top: 8px;
  	text-align: center;
   vertical-align: middle;
   margin: auto;
@@ -162,6 +177,7 @@ Template: blankslate
     width: 0;
     height: 100%;
     margin-left: -550px;
+    padding-left: 40px;
     overflow-y: auto;
     background: #fff;
 		border-right: 6.5px solid #F35919;
@@ -188,6 +204,7 @@ Template: blankslate
 /* Sidebar Styles */
 #menu-toggle img{
   position: fixed; top: 50%; width: 60px; z-index: 9999;
+  left: 40px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -196,6 +213,7 @@ Template: blankslate
 
 #menu-toggle.toggled img{
   position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
+    left: 40px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -249,7 +267,7 @@ Template: blankslate
 }
 
 #menu-toggle img{
-  position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
+  position: fixed; top: 50%; left: 15px; width: 60px; z-index: 9999;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -279,6 +297,13 @@ padding:0;
 .main-content{
 min-height:100%;
 margin:0;
+position:relative;
+}
+
+.main-content-shop{
+min-height:100%;
+margin:0;
+margin-top: 150px;
 position:relative;
 }
 
@@ -379,6 +404,12 @@ footer li a:hover {
 
 }
 
+.my-container-img{
+  width:100%;
+  height:140px;
+  overflow: hidden;
+}
+
 .my-container h2 {
 font-size: 1.5em;
 
@@ -416,6 +447,33 @@ font-size: 1.5em;
     width: 100%;
     height: auto;
     opacity: 0.7;
+}
+
+#product{
+  background-color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.row-single{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.content-hotel-all{
+  background-color: white;
+}
+
+.content-hotel h2{
+  font-size: 16px;
+}
+
+.content-hotel-content h2{
+  opacity: 0.7;
+  font-size: 16px;
+
 }
 
 

@@ -22,49 +22,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<div class="container single-product" >
+<div class="container">
+<div id="product">
+<div class "picture-hotel">
 	<div class="row">
-		<h1><?php	echo  get_post( $id )->post_title; ?></h1>
+		<div classe="col-sm-12">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salle-main.png" />
+			</div>
+		</div>
+	</div>
+		<div class="content-hotel-all">
+		<div class="row row-single">
+			<div class="col-sm-2 content-hotel">
+				<h2>salle 1 </h2>
+			</div>
+			<div class="col-sm-5 col-sm-offset-3 content-hotel-content">
+				<h2><?php	echo  get_post( $id )->post_title; ?></h2>
+		</div>
+	</div>
+	<div class="row row-single">
+		<div class="col-sm-2 content-hotel">
+				<h2>presentation </h2>
+		</div>
+		<div class="col-sm-5 col-sm-offset-3 content-hotel-content">
+			<h2><?php echo get_post_meta( $id, 'presentation', true); ?></h2>
 	</div>
 </div>
-<div classe="container">
-	<div class ="row" id="product">
-		<div class "row picture-hotel" id="im_produit">
-		<?php  do_action( 'woocommerce_before_single_product_summary' ); // photo ?>
-			<div class="col-md-offset-0 col-md-3 content-hotel">
-				<h2>description</h2>
-				<?php echo the_content(); ?>
-			</div>
-			<div class="col-md-offset-0 col-md-3 content-hotel">
-				<h2>presentation </h2>
-				<?php echo get_post_meta( $id, 'presentation', true); ?>
-			</div>
-<<<<<<< HEAD
-			<div class="col-md-offset-2 col-md-7 content-hotel">
-				<h2>telephone</h2>
-				<?php echo get_post_meta( $id, 'telephone', true);?>
-			</div>
-			<div class="col-md-offset-2 col-md-7 content-hotel">
-				<h2>situation geographique</h2>
-				<?php echo get_post_meta( $id, 'situation', true); ?>
-=======
-			<div class="col-md-offset-0 col-md-3 content-hotel">
-				<h2>situation</h2>
-				<?php echo get_post_meta( $id, 'situation', true);?>
-			</div>
-			<div class="col-md-offset-0 col-md-3 content-hotel">
-				<h2>Telephone </h2>
-				<?php echo get_post_meta( $id, 'telephone', true); ?>
->>>>>>> 8be9e57a603315e0105b0af42c2e7eb8c8b6b076
-			</div>
-			<div class="col-md-offset-2 col-md-7 content-hotel">
-				<h2>Capacite</h2>
-				<?php echo get_post_meta( $id, 'capacite', true);?>
-			</div>
-			<div class="col-md-offset-2 col-md-7 content-hotel">
+<div class="row row-single">
+	<div class="col-sm-2 content-hotel">
+		<h2>telephone</h2>
+	</div>
+	<div class="col-sm-5 col-sm-offset-3 content-hotel-content">
+		<h2><?php echo get_post_meta( $id, 'telephone', true);?></h2>
+</div>
+</div>
+<div class="row row-single">
+	<div class="col-sm-4 content-hotel">
+		<h2>situation geographique</h2>
+	</div>
+	<div class="col-sm-5 col-sm-offset-1 content-hotel-content">
+	<h2>	<?php echo get_post_meta( $id, 'situation', true); ?></h2>
+</div>
+</div>
+<div class="row row-single">
+	<div class="col-sm-2 content-hotel">
+		<h2>Capacite</h2>
+	</div>
+	<div class="col-sm-5 col-sm-offset-3 content-hotel-content">
+	<h2>	<?php echo get_post_meta( $id, 'capacite', true);?></h2>
+</div>
+</div>
+		<div class="row row-single">
+			<div class="col-md-offset-0 col-md-6 content-hotel">
 				<h2>Type d'etablissement</h2>
 				<?php echo get_post_meta( $id, 'type', true);?>
 			</div>
+			<div class="col-md-offset-10 col-md-3 content-hotel">
+				<a href="<?php echo WC()->cart->get_cart_url(); ?>"><img style="width:100px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cart-img.png" /></a>
+			</div>
+		</div>
 		</div>
 	</div>
 </div>
