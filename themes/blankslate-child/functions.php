@@ -166,6 +166,15 @@ function msk_add_test_field_data() {
 				'value' => 'value4', // La valeur enregistrée, choisie, de la radio
 				)
 			);
+	woocommerce_wp_text_input(
+			array(
+				'id' => 'type',
+				'label' => __("type d'etablissement", 'msk'),
+				'placeholder' => __(get_post_meta($product->id, 'type', true), 'msk'),
+				'description' => __("type", 'msk'),
+				'desc_tip' => false
+				)
+			);
 	echo '</div>';
 }
 add_action('woocommerce_product_options_general_product_data', 'msk_add_test_field_data');
@@ -191,6 +200,10 @@ function msk_save_hotel_fields($product_id, $post, $update) {
 		if (isset($_POST['reponse'])) {
 			$hates = $_POST['reponse'];
 			update_post_meta($product_id, 'reponse', $hates);
+		}
+		if (isset($_POST['type'])) {
+			$loves = $_POST['type'];
+			update_post_meta($product_id, 'type', $loves);
 		}
 	}
 }

@@ -39,6 +39,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h2>presentation </h2>
 				<?php echo get_post_meta( $id, 'presentation', true); ?>
 			</div>
+<<<<<<< HEAD
+			<div class="col-md-offset-2 col-md-7 content-hotel">
+				<h2>telephone</h2>
+				<?php echo get_post_meta( $id, 'telephone', true);?>
+			</div>
+			<div class="col-md-offset-2 col-md-7 content-hotel">
+				<h2>situation geographique</h2>
+				<?php echo get_post_meta( $id, 'situation', true); ?>
+=======
 			<div class="col-md-offset-0 col-md-3 content-hotel">
 				<h2>situation</h2>
 				<?php echo get_post_meta( $id, 'situation', true);?>
@@ -46,9 +55,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="col-md-offset-0 col-md-3 content-hotel">
 				<h2>Telephone </h2>
 				<?php echo get_post_meta( $id, 'telephone', true); ?>
+>>>>>>> 8be9e57a603315e0105b0af42c2e7eb8c8b6b076
 			</div>
+			<div class="col-md-offset-2 col-md-7 content-hotel">
 				<h2>Capacite</h2>
 				<?php echo get_post_meta( $id, 'capacite', true);?>
+			</div>
+			<div class="col-md-offset-2 col-md-7 content-hotel">
+				<h2>Type d'etablissement</h2>
+				<?php echo get_post_meta( $id, 'type', true);?>
 			</div>
 		</div>
 	</div>
