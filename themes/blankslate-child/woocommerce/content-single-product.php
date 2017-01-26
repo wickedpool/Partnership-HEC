@@ -30,7 +30,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div classe="container">
 	<div class ="row" id="product">
 		<div class "row picture-hotel" id="im_produit">
+			<div class="col-sm-12 sol-sm-offset-0">
 		<?php  do_action( 'woocommerce_before_single_product_summary' ); // photo ?>
+	</div>
 			<div class="col-md-offset-2 col-md-7 content-hotel">
 				<h2>description</h2>
 				<?php echo the_content(); ?>
@@ -40,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php echo get_post_meta( $id, 'presentation', true); ?>
 			</div>
 			<div class="col-md-offset-2 col-md-7 content-hotel">
-				<h2>situationn</h2>
+				<h2>situation</h2>
 				<?php echo get_post_meta( $id, 'situation', true);?>
 			</div>
 			<div class="col-md-offset-2 col-md-7 content-hotel">

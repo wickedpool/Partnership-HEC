@@ -81,12 +81,12 @@ Template: blankslate
 
 .btn-head2{
   position: absolute;
-  right: 4vh;
+  right: 4vw;
   top: 20%;
 }
 .btn-head3{
   position: absolute;
-  right: 20vh;
+  right: 12vw;
   top: 20%;
 }
 
@@ -325,15 +325,23 @@ footer li a:hover {
 
 .search-font{
   position: relative;
-  font-size: 10px;
-  text-align: left;
-  float: left;
+  font-size: 9px;
+  text-align: center;
+
 }
 
 .articles-search{
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
+@media screen and (min-width: 768px) {
+  .recherche-title{
+    position: relative;
+    left: 50px;
+  }
+}
+
 
 
 .recherche-title p {
@@ -349,6 +357,7 @@ footer li a:hover {
 
 .my-container {
     position: relative;
+    margin-bottom: 30px;
     overflow: hidden;
     background-color: #F35919;
 }
@@ -356,7 +365,38 @@ footer li a:hover {
     position: absolute;
     z-index: 2;
     display: none;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    bottom: 35%;
 
+}
+
+
+@media screen and (max-width: 808px) {
+  .my-container article {
+      position: absolute;
+      z-index: 2;
+      display: none;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      bottom: 50%;
+  }
+}
+
+.my-container h2 {
+font-size: 1.5em;
+
+}
+
+.my-container a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.my-container a{
+    color: white;
 }
 
 .my-container:hover article{

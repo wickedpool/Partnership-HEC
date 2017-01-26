@@ -25,9 +25,13 @@
 						<?php while ( have_posts() ) : the_post(); ?>
 							<div class="col-sm-3 col-sm-offset-0">
 								<div class="my-container">
+									<div class="my-container-txt">
 									<?php get_template_part( 'entry' ); ?>
+								</div>
+								<div class="my-container-img">
 									<?php $img_url = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
 									<img class="img-responsive" style="width:100%;height:auto;" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>"/>
+								</div>
 								</div>
 							</div>
 						<?php endwhile; ?>
