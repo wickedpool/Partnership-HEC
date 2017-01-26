@@ -379,6 +379,12 @@ footer li a:hover {
 
 }
 
+.my-container-img{
+  width:100%;
+  height:140px;
+  overflow: hidden;
+}
+
 .my-container h2 {
 font-size: 1.5em;
 

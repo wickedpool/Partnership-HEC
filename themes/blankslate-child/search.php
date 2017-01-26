@@ -30,7 +30,7 @@
 								</div>
 								<div class="my-container-img">
 									<?php $img_url = $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
-									<img class="img-responsive" style="width:100%;height:140px;" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>"/>
+									<img class="img-responsive" src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>"/>
 								</div>
 								</div>
 							</div>
