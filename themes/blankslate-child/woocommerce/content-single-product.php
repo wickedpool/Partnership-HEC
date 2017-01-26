@@ -40,12 +40,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php echo get_post_meta( $id, 'presentation', true); ?>
 			</div>
 			<div class="col-md-offset-2 col-md-7 content-hotel">
-				<h2>situationn</h2>
-				<?php echo get_post_meta( $id, 'situation', true);?>
+				<h2>telephone</h2>
+				<?php echo get_post_meta( $id, 'telephone', true);?>
 			</div>
 			<div class="col-md-offset-2 col-md-7 content-hotel">
-				<h2>Telephone </h2>
-				<?php echo get_post_meta( $id, 'telephone', true); ?>
+				<h2>situation geographique</h2>
+				<?php echo get_post_meta( $id, 'situation', true); ?>
 			</div>
 				<h2>Capacite</h2>
 				<?php echo get_post_meta( $id, 'capacite', true);?>
