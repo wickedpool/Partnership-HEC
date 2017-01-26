@@ -60,9 +60,7 @@
 		</div>
 	</div>
 </div>
-
-<!-- Bouton connection -->
-<a class="btn btn-2 btn-head3 btn-lg" href="#myModal1" data-toggle="modal">Inscription</a>
+ <!-- Bouton connection -->
 <a class="btn btn-2 btn-head2 btn-lg" href="#myModal1" data-toggle="modal">Connexion</a>
 <div id="myModal1" class="modal fade" tabindex="-1">
     <div class="modal-dialog">
