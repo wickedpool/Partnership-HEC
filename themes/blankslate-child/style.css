@@ -172,6 +172,7 @@ Template: blankslate
 }
 
 #sidebar-wrapper {
+    overflow-x: hidden;
     z-index: 1000;
     position: fixed;
     left: 550px;
