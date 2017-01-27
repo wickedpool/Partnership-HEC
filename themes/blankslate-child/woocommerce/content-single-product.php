@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h2>salle 1 </h2>
 			</div>
 			<div class="col-sm-5 col-sm-offset-3 content-hotel-content">
-				<h2><?php	echo  get_post( $id )->post_title; ?></h2>
+				<h2 class="animated slideRight"><?php	echo  get_post( $id )->post_title; ?></h2>
 		</div>
 	</div>
 	<div class="row row-single">
@@ -78,7 +78,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php echo get_post_meta( $id, 'type', true);?>
 			</div>
 			<div class="col-md-offset-10 col-md-3 content-hotel">
-				<a href="<?php echo WC()->cart->get_cart_url(); ?>"><img style="width:100px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cart-img.png" /></a>
+				<a href="<?php echo WC()->cart->get_cart_url(); ?>"><img class="animated infinite pulse" style="width:100px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cart-img.png" /></a>
 			</div>
 		</div>
 		</div>
