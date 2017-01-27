@@ -171,14 +171,15 @@ Template: blankslate
     transition: all 0.5s ease;
 }
 
-#menu-toggle img{
-  position: fixed; top: 50%; left: 15px; width: 60px; z-index: 9999;
-  -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-}
 
+#wrapperr.toggled >   #menu-toggle img{
+    position: fixed; top: 50%; left: 520px; width: 60px; z-index: 9999;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
 
 #sidebar-wrapper {
     overflow-x: hidden;
@@ -211,18 +212,23 @@ Template: blankslate
 #wrapper.toggled #page-content-wrapper {
     margin-right: -550px;
 }
-
 /* Sidebar Styles */
 #menu-toggle img{
   position: fixed; top: 50%; width: 60px; z-index: 9999;
   left: 40px;
-
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #menu-toggle.toggled img{
   position: fixed; top: 50%; left: 0; width: 60px; z-index: 9999;
     left: 40px;
-
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .sidebar-nav {
@@ -271,16 +277,21 @@ Template: blankslate
     background: none;
 }
 
-#wrapperr.toggled >   #menu-toggle img{
-    position: fixed; top: 50%; left: 520px; width: 60px; z-index: 9999;
-
-
+#menu-toggle img{
+  position: fixed; top: 50%; left: 15px; width: 60px; z-index: 9999;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 
 #menu-toggle.toggled img{
   position: fixed; top: 50%; left: 520px; width: 60px; z-index: 9999;
-
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 *{
