@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h2>salle 1 </h2>
 			</div>
 			<div class="col-sm-5 col-sm-offset-3 content-hotel-content">
-				<h2 class="animated slideInRight"><?php	echo  get_post( $id )->post_title; ?></h2>
+				<h2 class="animated slideRight"><?php	echo  get_post( $id )->post_title; ?></h2>
 		</div>
 	</div>
 	<div class="row row-single">

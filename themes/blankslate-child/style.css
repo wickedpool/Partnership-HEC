@@ -364,6 +364,14 @@ footer li a:hover {
   padding-bottom: 100px;
 }
 
+.slideRight{
+  -moz-animation: fadeInRight 1.5s ease 0.8s forwards;
+  -webkit-animation: fadeInRight 1.5s ease 0.8s forwards;
+  -o-animation: fadeInRight 1.5s ease 0.8s forwards;
+  -ms-animation: fadeInRight 1.5s ease 0.8s forwards;
+  animation: fadeInRight 1.5s ease 0.8s forwards;
+}
+
 @media screen and (min-width: 768px) {
   .recherche-title{
     position: relative;
