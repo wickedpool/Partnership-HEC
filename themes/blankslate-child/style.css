@@ -368,11 +368,12 @@ footer li a:hover {
   .recherche-title{
     position: relative;
     left: 50px;
-    -moz-animation: flipInX 1.5s ease forwards;
-    -webkit-animation: flipInX 1.5s ease forwards;
-    -o-animation: flipInX 1.5s ease forwards;
-    -ms-animation: flipInX 1.5s ease forwards;
-    animation: flipInX 1.5s ease forwards;
+    opacity: 0;
+    -moz-animation: flipInX 1.5s ease 0.8s forwards;
+    -webkit-animation: flipInX 1.5s ease 0.8s forwards;
+    -o-animation: flipInX 1.5s ease 0.8s forwards;
+    -ms-animation: flipInX 1.5s ease 0.8s forwards;
+    animation: flipInX 1.5s ease 0.8s forwards;
   }
 }
 

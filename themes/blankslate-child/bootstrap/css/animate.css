@@ -1337,6 +1337,12 @@
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
+  opacity: 0;
+  -moz-animation: fadeInLeft 1s ease 1.4s forwards;
+  -webkit-animation: fadeInLeft 1s ease 1.4s forwards;
+  -o-animation: fadeInLeft 1s ease 1.4s forwards;
+  -ms-animation: fadeInLeft 1s ease 1.4s forwards;
+  animation: fadeInLeft 1s ease 1.4s forwards;
 }
 
 @-webkit-keyframes fadeInLeftBig {
@@ -1872,6 +1878,7 @@
   to {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
+    opacity: 1;
   }
 }
 
@@ -1905,6 +1912,7 @@
   to {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
+    opacity: 1;
   }
 }
 
