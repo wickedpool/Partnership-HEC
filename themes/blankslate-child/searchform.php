@@ -49,7 +49,7 @@ $equips = array(
   'paperboard' => __( 'Paperboard' ),
   'tableau' => __( 'Tableau' ),
   'projecteur-ecran' => __( 'Projecteur' ),
-  'photocopieuse' => __( 'P-copieuse' ),
+  'photocopieuse' => __( 'Copieuse' ),
   'regie-son' => __( 'son' ),
   'regie-lumiere' => __( 'lumière' ),
   'cafetariat' => __( 'Cafétariat' ),
@@ -62,13 +62,17 @@ $equips = array(
         foreach ( $equips as $key => $equip ) {
             if ($num == 1) echo '<div class="row">'; //First col, so open the row.
 
-                echo '<div class="col-xs-2"> <input type="checkbox" name="equipements[]" class="" '
+                echo '<div class="toggle-button toggle-button--tuuli col-xs-2 checkbox-section"> <input type="checkbox" name="equipements[]" class="" '
                 . 'id="equipment[' . $key . ']" value="' . $key . '"> <label for="equipment[' . $key . ']"><img src="';echo THEME_IMG_PATH. $key .'.png"/><br/><p class = "search-font">' . $equip . '</p></label></div>';
             $num++;
             if ($num > $breaker) { echo '</div>'; $num = 1; } // The num arrived at the break-point. Close the row!
         }
     ?>
   </div>
+    <div class="toggle-button toggle-button--tuuli">
+        <input id="toggleButton4" type="checkbox">
+        <label for="toggleButton4"></label>
+    </div>
     <div class="row">
       <div class="col-xs-offset-2">
 	<?php echo '<button class="search-confirm-button" type="submit"><img src="';
