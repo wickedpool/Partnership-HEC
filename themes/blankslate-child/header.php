@@ -10,7 +10,7 @@
 <div id="wrapper" class="hfeed">
 <header class="main-header" id="header" role="banner">
   <section id="branding">
-  <div id="site-title"><a href = "<?php echo get_option('home'); ?>/" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" /></a></div>
+  <div id="site-title"><a href = "<?php echo get_option('home'); ?>/" ><img class="animated slideInDown" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" /></a></div>
   </section>
 <!-- Bouton referencer salle -->
 
