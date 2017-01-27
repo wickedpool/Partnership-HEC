@@ -72,11 +72,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<h2>	<?php echo get_post_meta( $id, 'capacite', true);?></h2>
 </div>
 </div>
+<div class="row row-single">
+	<div class="col-sm-4 content-hotel">
+		<h2>Type d'etablissement</h2>
+	</div>
+	<div class="col-sm-5 col-sm-offset-1 content-hotel-content">
+	<h2><?php echo get_post_meta( $id, 'type', true);?></h2>
+</div>
+</div>
 		<div class="row row-single">
-			<div class="col-md-offset-0 col-md-6 content-hotel">
-				<h2>Type d'etablissement</h2>
-				<?php echo get_post_meta( $id, 'type', true);?>
-			</div>
 			<div class="col-md-offset-10 col-md-3 content-hotel">
 				<a href="<?php echo WC()->cart->get_cart_url(); ?>"><img class="animated infinite pulse" style="width:100px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cart-img.png" /></a>
 			</div>
