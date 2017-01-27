@@ -12,7 +12,7 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-10 col-sm-offset-1">
-<section id="content" role="main">
+<section id="content" role="main" class="animated slideInLeft">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <section class="entry-content">
